@@ -16,11 +16,17 @@ def knapsack(wt, val, W, n):
 		return t[n][W] 
 
 if __name__ == '__main__': 
-	profit = [60, 100, 120] 
-	weight = [10, 20, 30] 
-	W = 50
-	n = len(profit) 
+    profit = [] 
+    weight = [] 
 
-	t = [[-1 for i in range(W + 1)] for j in range(n + 1)] 
-	print(knapsack(weight, profit, W, n)) 
+    with open("data.txt") as f:
+        for i in f:
+            profit += i.split[0]
+            weight += i.split[1]
+            
+    W = 5000
+    n = len(profit) 
+
+    t = [[-1 for i in range(W + 1)] for j in range(n + 1)] 
+    print(knapsack(weight, profit, W, n)) 
 
