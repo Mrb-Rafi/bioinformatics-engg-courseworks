@@ -9,15 +9,6 @@ if not os.path.isfile(filename):
     net_handle = Entrez.efetch(
         db="nucleotide", id="1124779319", rettype="fasta", retmode="text"
     )
-#     out_handle = open(filename, "w")
-#     out_handle.write(net_handle.read())
-#     out_handle.close()
-#     net_handle.close()
-#     print("Saved")
-
-# print("Parsing...")
-# record = SeqIO.read(filename, "fasta")
-# print(record)
 
 temp = net_handle.read()
 
